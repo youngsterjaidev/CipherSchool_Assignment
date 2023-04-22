@@ -4,11 +4,41 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Vite + React + TS</title>
-    <script type="module" crossorigin src="./assets/index-88542b38.js"></script>
-    <link rel="stylesheet" href="./assets/index-d526a0c5.css">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      #modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        left: 0;
+        z-index: 3;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-8c2f938b.js"></script>
   </head>
   <body>
+    <div id="modal"></div>
     <div id="root"></div>
     
   </body>
