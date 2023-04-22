@@ -26,7 +26,8 @@ const CloseWrapper = styled.div`
 
 const Content = styled.div``;
 
-const modalRoot: HTMLDivElement | null = document.getElementById("modal");
+// @ts-ignore
+const modalRoot = document.getElementById("modal");
 
 const Modal = ({ children, closeModal }) => {
   const elRef = useRef<HTMLDivElement | null>(null);
@@ -35,6 +36,7 @@ const Modal = ({ children, closeModal }) => {
     elRef.current = document.createElement("div");
   }
 
+  // @ts-ignore
   useEffect(() => {
     if (elRef) {
       modalRoot.appendChild(elRef?.current);

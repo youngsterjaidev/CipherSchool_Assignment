@@ -4,6 +4,11 @@ import { Link } from "@reach/router";
 import { Illustrations } from "../../assets";
 import { animated, useSpring } from "@react-spring/web";
 
+interface ComponentProps {
+  isOpen?: any;
+  to?: string;
+}
+
 const Container = styled(animated.nav)`
   background: #fff;
   box-shadow: 0 0 1rem rgba(8, 16, 16, 0.15);
@@ -39,7 +44,7 @@ const Ul = styled.ul`
   width: 100%;
 `;
 
-const Li = styled.li`
+const Li = styled.li<ComponentProps>`
   display: flex;
   flex-flow: row wrap;
   justify-content: ${(props) => (props.isOpen ? `` : `center`)};
@@ -54,7 +59,7 @@ const Li = styled.li`
   }
 `;
 
-const MyLink = styled(Link)`
+const MyLink = styled(Link)<ComponentProps>`
   display: flex;
   align-items: center;
   text-decoration: none;
